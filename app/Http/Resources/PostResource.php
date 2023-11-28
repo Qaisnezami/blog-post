@@ -19,7 +19,8 @@ class PostResource extends JsonResource
             'title'=> $this->title,
             'created'=> $this->created_at->diffForHumans(),
             'topics'=> TopicResource::collection($this->topics),
-            'profile'=> new ProfileResource($this->profile)
+            'profile'=> new ProfileResource($this->profile),
+            'images'=> $this->images
         ];
     }
 }

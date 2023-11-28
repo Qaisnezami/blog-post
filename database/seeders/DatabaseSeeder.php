@@ -6,6 +6,8 @@ namespace Database\Seeders;
 
 use App\Models\Permission;
 use App\Models\Post;
+use App\Models\Role;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -17,17 +19,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
-        
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        \App\Models\User::factory(3)->create();
 
+        Role::create(['name'=>'Admin']);
         $this->call([
-            // PostSeeder::class,
+            PostSeeder::class,
             PermissionSeeder::class,
-           
+            SettingSeeder::class
         ]);
+
+
+        
     }
 }

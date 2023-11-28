@@ -39,9 +39,7 @@
                                     {{$user->email}}
                                 </td>
                                
-                                <td>
-                                   {{$user->profile->profile_pic}}
-                                </td>
+                                
                                 <td>
                                     {{$user->role->name}}
                                 </td>

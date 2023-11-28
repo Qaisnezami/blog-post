@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\Post;
+use App\Models\Setting;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Str;
-class PostSeeder extends Seeder
+
+class SettingSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,6 +15,8 @@ class PostSeeder extends Seeder
      */
     public function run()
     {
-        Post::factory(20)->create();
+        Setting::create([
+            'logo' => 'logo.jpg'
+        ]);
     }
 }
